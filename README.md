@@ -81,7 +81,7 @@ check_status() {
     ) &
     pid=$!
     sleep 3
-    kill $pid 2>/dev/null && echo "1" > /tmp/nc_exit  # если убили — значит, завис
+    kill $pid 2>/dev/null && echo "1" > /tmp/nc_exit
     wait $pid 2>/dev/null
 
     if [ "$(cat /tmp/nc_exit 2>/dev/null)" = "0" ]; then
