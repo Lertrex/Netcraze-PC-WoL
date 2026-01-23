@@ -80,7 +80,7 @@ check_status() {
         echo "$?" > /tmp/nc_exit
     ) &
     pid=$!
-    sleep 3
+    sleep 1
     kill $pid 2>/dev/null && echo "1" > /tmp/nc_exit
     wait $pid 2>/dev/null
 
