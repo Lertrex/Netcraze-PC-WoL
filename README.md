@@ -104,7 +104,7 @@ case "$action" in
         ;;
     status)
         s=$(check_status)
-        echo "{\"status\":$s}"
+        echo "{\"value\":$s}"
         ;;
     *)
         echo '{"error":"Use action=on|status"}'
